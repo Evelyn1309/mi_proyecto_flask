@@ -1,0 +1,19 @@
+# Entorno virtual
+venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos temporales
+*.log
+*.sqlite3
+
+# Configuración de VS Code / PyCharm
+.vscode/
+.idea/
+
+# Carpeta compilada
+compilado/
