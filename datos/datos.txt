@@ -1,0 +1,6 @@
+from flask import Flask, render_template, request, redirect, url_for
+import json
+import csv
+Juan Perez,Helado Vainilla,2,juanperez@gmail.com
+Maria Lopez,Helado Chocolate,1,maria.lopez@yahoo.com
+Carlos Ramirez,Paleta Fresa,5,carlos.ramirez@hotmail.com

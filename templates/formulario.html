@@ -1,0 +1,27 @@
+<form action="{{ url_for('guardar_db') }}" method="POST">
+    Nombre: <input type="text" name="nombre" required><br>
+    Producto: <input type="text" name="producto" required><br>
+    Cantidad: <input type="number" name="cantidad" required><br>
+    Email: <input type="email" name="email" required><br><br>
+    <button type="submit">Guardar en DB</button>
+</form>
+
+<form action="{{ url_for('guardar_txt') }}" method="POST">
+    ...mismo formulario...
+    <button type="submit">Guardar en TXT</button>
+</form>
+
+<form action="{{ url_for('guardar_json') }}" method="POST">
+    ...mismo formulario...
+    <button type="submit">Guardar en JSON</button>
+</form>
+
+<form action="{{ url_for('guardar_csv') }}" method="POST">
+    ...mismo formulario...
+    <button type="submit">Guardar en CSV</button>
+</form>
+
+<a href="{{ url_for('leer_db') }}">Ver datos DB</a> |
+<a href="{{ url_for('leer_txt') }}">Ver datos TXT</a> |
+<a href="{{ url_for('leer_json') }}">Ver datos JSON</a> |
+<a href="{{ url_for('leer_csv') }}">Ver datos CSV</a>

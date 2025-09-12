@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Juan Perez",
+        "producto": "Helado Vainilla",
+        "cantidad": 2,
+        "email": "juanperez@gmail.com"
+    },
+    {
+        "nombre": "Maria Lopez",
+        "producto": "Helado Chocolate",
+        "cantidad": 1,
+        "email": "maria.lopez@yahoo.com"
+    },
+    {
+        "nombre": "Carlos Ramirez",
+        "producto": "Paleta Fresa",
+        "cantidad": 5,
+        "email": "carlos.ramirez@hotmail.com"
+    }
+]
