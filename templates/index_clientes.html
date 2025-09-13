@@ -1,0 +1,41 @@
+<h1>Inventario de Clientes</h1>
+
+<h2>Agregar Cliente</h2>
+<form action="{{ url_for('agregar_cliente') }}" method="POST">
+    Nombre: <input type="text" name="nombre" required><br>
+    Dirección: <input type="text" name="direccion"><br>
+    Correo: <input type="email" name="correo"><br>
+    Teléfono: <input type="text" name="telefono"><br>
+    <button type="submit">Agregar</button>
+</form>
+
+<h2>Buscar Cliente</h2>
+<form action="{{ url_for('buscar_cliente') }}" method="GET">
+    Nombre: <input type="text" name="nombre">
+    <button type="submit">Buscar</button>
+</form>
+
+<h2>Lista de Clientes</h2>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+    </tr>
+    {% for c in clientes %}
+    <tr>
+        <form action="{{ url_for('actualizar_cliente', id_cliente=c.id_cliente) }}" method="POST">
+            <td><input type="text" name="nombre" value="{{ c.nombre }}"></td>
+            <td><input type="text" name="direccion" value="{{ c.direccion }}"></td>
+            <td><input type="email" name="correo" value="{{ c.correo }}"></td>
+            <td><input type="text" name="telefono" value="{{ c.telefono }}"></td>
+            <td>
+                <button type="submit">Actualizar</button>
+                <a href="{{ url_for('eliminar_cliente', id_cliente=c.id_cliente) }}">Eliminar</a>
+            </td>
+        </form>
+    </tr>
+    {% endfor %}
+</table>
